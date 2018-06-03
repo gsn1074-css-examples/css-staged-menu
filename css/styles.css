@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  padding: 2em;
+  font-family: sans-serif;
+  background-color: blue; }
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: .5em; }
+
+nav {
+  display: none;
+  margin: .5em; }
+
+nav:target.animated {
+  display: block; }
+
+nav:target.animated > * {
+  display: block;
+  position: relative;
+  animation: open .5s forwards;
+  opacity: 0; }
+
+@keyframes open {
+  0% {
+    top: -2em;
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    top: 0;
+    opacity: 1; } }
